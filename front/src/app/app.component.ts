@@ -18,7 +18,7 @@ import { TicketService } from './ticket.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  title = 'Connection to Django app!';
+  title = 'EventFactorial';
   logged: boolean = false;
   username: string = "";
   password: string = "";
@@ -30,9 +30,10 @@ export class AppComponent implements OnInit {
   constructor(private eventService: EventService,
     private http: HttpClient,
     private router: Router,
-    private ticketService: TicketService
+    private ticketService: TicketService,
       ) {
       }
+
   displaySuccessMessage() {
     this.showSuccessMessage = true;
   }
@@ -41,9 +42,9 @@ export class AppComponent implements OnInit {
       const access = localStorage.getItem("access");
       if (access) {
         this.logged = true;
-        this.getEvents();
-        this.getTickets();
       }
+      this.getEvents();
+      this.getTickets();
   }
   
 
@@ -87,8 +88,8 @@ export class AppComponent implements OnInit {
       console.log(response);
       this.displaySuccessMessage();
       setTimeout(() => {
-        this.showSuccessMessage = false; // Reset success flag to false after a certain time (optional)
-      }, 5000); // Reset success message after 5 seconds (adjust time as needed)
+        this.showSuccessMessage = false; 
+      }, 5000); 
   
     }, error => {
       console.error('An error occurred:', error);
