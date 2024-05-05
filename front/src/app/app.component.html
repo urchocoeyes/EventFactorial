@@ -49,7 +49,7 @@
                   <button (click)="onRegister(event.id, 1)">Register</button>
                 </div>
                 <div id="successMessage" class="success-message" *ngIf="showSuccessMessage">
-                  Registered successfully!
+                  Регистрация прошла успешно!
                 </div>
     
               </li>
@@ -58,7 +58,27 @@
     
       </section>
 
-      <router-outlet></router-outlet>
   </div>
+
   
+  <div class="main">
+    <h2>Tickets</h2>
+    <section id="available-tickets">
+      <div class="tickets">
+        <div *ngFor="let ticket of tickets" class="ticket"> 
+            <div class="single-ticket">
+                <li class="ticket-item">
+                  <h2>{{ ticket.event_title }}</h2>
+                  <p>Билет номер: {{ ticket.ticket_id }}</p>
+                  <p>Описание события: {{ ticket.event_description }}</p>
+                  <p>Дата: {{ ticket.event_date }}</p>
+                  <p>Место проведения: {{ ticket.event_location }}</p>
+                </li>
+            </div>        
+        </div>
+      </div>
+    </section>
+  </div>
 </div>
+
+  

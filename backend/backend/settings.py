@@ -61,14 +61,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:4200"]
+# CSRF_TRUSTED_ORIGINS = ["http://localhost:4200"]
 
 # settings.py
 
-CSRF_COOKIE_SECURE = False
-CSRF_COOKIE_HTTPONLY = False
+# CSRF_COOKIE_SECURE = False
+# CSRF_COOKIE_HTTPONLY = False
 
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -77,7 +77,6 @@ ROOT_URLCONF = 'backend.urls'
 
 CORS_ALLOWED_ORIGINS = [
         "http://localhost:4200",
-
 ]
 
 TEMPLATES = [

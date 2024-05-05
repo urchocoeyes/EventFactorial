@@ -10,5 +10,5 @@ urlpatterns = [
 
     path('events/<int:event_id>/register/<int:user_id>/', register_user_for_event, name='register_user_for_event'),
 
-    path('users/<int:pk>/tickets', user_tickets)
+    path('users/<int:pk>/tickets/', user_tickets)
 ]

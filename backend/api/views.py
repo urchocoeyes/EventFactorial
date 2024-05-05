@@ -10,26 +10,31 @@ from rest_framework import status
 from django.shortcuts import Http404
 from rest_framework.response import Response
 from .serializers import *
+from django.views.decorators.csrf import csrf_exempt
 
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 # class MyTokenObtainPairView(TokenObtainPairView):
 #     pass  
 
+@csrf_exempt
 @permission_classes([IsAuthenticated])
 def register_user_for_event(request, event_id, user_id):
-    event = get_object_or_404(Event, pk=event_id)
-    user = get_object_or_404(User, pk=user_id)
-    
-    if event.tickets_available > 0:
-        event.tickets_available -= 1
-        event.save()
+    if request.method == 'POST':
+        event = get_object_or_404(Event, pk=event_id)
+        user = get_object_or_404(User, pk=user_id)
         
-        ticket = Ticket(user=user, event=event)
-        ticket.save()
-        return JsonResponse({'success': True, 'message': 'Registration successful'})
+        if event.tickets_available > 0:
+            event.tickets_available -= 1
+            event.save()
+            
+            ticket = Ticket(user=user, event=event)
+            ticket.save()
+            return JsonResponse({'success': True, 'message': 'Registration successful'})
+        else:
+            return JsonResponse({'success': False, 'message': 'No tickets available'})
     else:
-        return JsonResponse({'success': False, 'message': 'No tickets available'})
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
 
 
 @api_view(['GET'])

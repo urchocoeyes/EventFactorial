@@ -7,11 +7,12 @@ import { CommonModule } from '@angular/common';
   providedIn: 'root'
 })
 export class TicketService {
+  
   private URL = 'http://127.0.0.1:8000/api';
 
   constructor(private http: HttpClient) {}
 
   getUserTickets(userId: number): Observable<ITicket[]> {
-    return this.http.get<ITicket[]>(`${this.URL}/users/${userId}/tickets`);
+    return this.http.get<ITicket[]>(`${this.URL}/users/${userId}/tickets/`);
   }
 }
