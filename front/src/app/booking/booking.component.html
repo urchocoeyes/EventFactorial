@@ -5,16 +5,16 @@
       <div class="tickets" *ngIf="tickets">
         <div *ngFor="let ticket of tickets"> 
           <h2>{{ ticket.event_title }}</h2>
-          <p>Билет номер: {{ ticket.id }}</p>
+          <p>Билет номер: {{ ticket.ticket_id }}</p>
           <p>{{ ticket.event_description }}</p>
           <p>Дата: {{ ticket.event_date }}</p>
           <p>Место проведения: {{ ticket.event_location }}</p>
           <div class="cta-btn">
-            <button (click)="deleteBooking(1, ticket.id)">Удалить билет</button>
+            <button (click)="deleteBooking(1, ticket.ticket_id)">Удалить билет</button>
           </div>
-          <div id="successMessage" class="success-message" *ngIf="showSuccessMessage">
+          <!-- <div id="successMessage" class="success-message" *ngIf="showSuccessMessage">
               Билет успешно удален!
-          </div>
+          </div> -->
         </div>
           <!-- <app-ticket *ngFor="let ticket of tickets" [ticket]="ticket"></app-ticket> -->
       </div>

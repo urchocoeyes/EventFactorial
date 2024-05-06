@@ -40,6 +40,7 @@ export class BookingComponent {
       .subscribe(response => {
         console.log(response);
         this.displaySuccessMessage();
+        this.router.navigate(['/delete_success']); 
       }, error => {
         console.error('An error occurred:', error);
       });

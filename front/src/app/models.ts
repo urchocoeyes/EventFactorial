@@ -10,11 +10,10 @@ export interface IEvent {
     date: Date;
     location: string;
     tickets_available: number;
-
   }
 
 export interface ITicket {
-    id: number;
+    ticket_id: number;
     event_title: string;
     event_description: string;
     event_date: Date; 

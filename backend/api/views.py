@@ -66,7 +66,7 @@ def user_tickets(request, pk):
         if ticket.event.title not in unique_event_names:
             unique_event_names.add(ticket.event.title)
             ticket_data.append({
-                'ticket': ticket.id,
+                'ticket_id': ticket.id,
                 'event_title': ticket.event.title,
                 'event_description':ticket.event.description,
                 'event_date': ticket.event.date,
