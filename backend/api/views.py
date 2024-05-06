@@ -74,8 +74,25 @@ def user_tickets(request, pk):
             })
 
 
-    return JsonResponse({'tickets': ticket_data})
+    return JsonResponse(ticket_data, safe=False)
 
+@csrf_exempt
+@permission_classes([IsAuthenticated])
+def delete_booking(request, pk, ticket_id):
+    if request.method == 'POST':
+        user = get_object_or_404(User, pk=pk)
+        ticket = get_object_or_404(Ticket, pk=ticket_id)
+        event = ticket.event
+        
+        if request.user == user and request.user == ticket.user:        
+            event.tickets_available += 1
+            event.save()
+            
+            user.tickets.remove(ticket)
+            
+            return JsonResponse({'success': True, 'message': 'Booking deleted successfully'})
+        else:
+            return JsonResponse({'success': False, 'message': 'Unauthorized to delete this booking'})
 
 
 

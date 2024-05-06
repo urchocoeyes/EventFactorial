@@ -1,0 +1,23 @@
+<div class="main">
+    <h2>Билеты</h2>
+    <section id="available-tickets">
+      <p *ngIf="loading">Loading...</p>
+      <div class="tickets" *ngIf="tickets">
+        <div *ngFor="let ticket of tickets"> 
+          <h2>{{ ticket.event_title }}</h2>
+          <!-- <p>Билет номер: {{ ticket.ticket_id }}</p> -->
+          <p>{{ ticket.event_description }}</p>
+          <p>Дата: {{ ticket.event_date }}</p>
+          <p>Место проведения: {{ ticket.event_location }}</p>
+          <div class="cta-btn">
+            <button (click)="delete_booking(1, ticket.ticket_id)">Удалить билет</button>
+          </div>
+          <div id="successMessage" class="success-message" *ngIf="showSuccessMessage">
+              Билет успешно удален!
+          </div>
+        </div>
+          <!-- <app-ticket *ngFor="let ticket of tickets" [ticket]="ticket"></app-ticket> -->
+      </div>
+    </section>
+<button class="back-button" (click)="goBack()">Вернуться на главную страницу</button>
+  </div>

@@ -9,6 +9,8 @@ urlpatterns = [
     path('events/<int:event_id>/', get_event),
 
     path('events/<int:event_id>/register/<int:user_id>/', register_user_for_event, name='register_user_for_event'),
+    path('users/<int:pk>/tickets/<int:ticket_id>/delete/', delete_booking, name='delete_booking'),
 
-    path('users/<int:pk>/tickets/', user_tickets)
+    path('users/<int:pk>/tickets/', user_tickets),
+
 ]
