@@ -1,0 +1,26 @@
+<div class="main">
+    <h2>События</h2>
+    <section id="available-events">
+        <div *ngFor="let event of events" class="event">
+            <div id="single-event">
+                <div class="event-item">
+                <h2>{{ event.title }}</h2>
+                <p>{{ event.description }}</p>
+                <p>Дата: {{ event.date }}</p>
+                <p>Место проведения: {{ event.location }}</p>
+                <p>Билеты доступны: {{event.tickets_available}}</p>
+                <div class="cta-btn">
+                    <button (click)="onRegister(event.id, 1)">Регистрация / Хочу пойти!</button>
+                </div>
+                <!-- <div id="successMessage" class="success-message" *ngIf="showSuccessMessage" [style.background-color]="'green'" [style.color]="'white'" [style.padding]="'10px'" [style.border-radius]="'5px'">
+                    Регистрация прошла успешно!
+                </div> -->
+                
+    
+            </div>
+            </div>
+        </div>
+  
+    </section>
+
+</div>

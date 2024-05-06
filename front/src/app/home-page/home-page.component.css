@@ -1,0 +1,136 @@
+.event-item {
+    margin: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+  }
+  .event-item h2,
+  .event-item p {
+    margin: 0.5rem 0;
+  }
+  p {
+    text-align: center;
+  }
+  .event-item h2 {
+    font-size: 1.5rem;
+    color: #414141;
+    text-align: center;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .event-item button {
+    font: inherit;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    cursor: pointer;
+    border: 1px solid #d34d4d;
+    background: #9b4747;
+  }
+  .event-item button:hover,
+  .event-item button:active {
+    border-color: #d34d4d;
+    background: #9b4747;
+  }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  h2 {
+    text-align: center;
+    color: #414141;
+    padding-top: 20px;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+  }
+  p {
+    text-align: center;
+    font-size: 1.125rem;
+  }
+  .event-item {
+    margin: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+  }
+  .event-item h2,
+  .event-item p {
+    margin: 0.5rem 0;
+  }
+  p {
+    text-align: center;
+  }
+  .event-item h2 {
+    font-size: 1.5rem;
+    color: #414141;
+    text-align: center;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .event-item button {
+    font: inherit;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    cursor: pointer;
+    border: 1px solid #d34d4d;
+    background: #9b4747;
+  }
+  .event-item button:hover,
+  .event-item button:active {
+    border-color: #d34d4d;
+    background: #9b4747;
+  }
+  .cta-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    padding: 12px 24px;
+    background-color: #b2a8a5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+
+  }
+  
+  .cta-btn button:hover {
+    background-color: #4cd352;
+    transform: translateY(-2px);
+  }
+  
+  .cta-btn button:focus {
+    outline: none;
+  }
+  
+  .cta-btn button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
+
