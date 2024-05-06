@@ -31,19 +31,30 @@ export class BookingComponent {
       this.ticketService.getUserTickets(1).subscribe((data: ITicket[]) => {
         this.tickets = data;
       });
-      console.log("lol");
+      console.log("tickket"+this.tickets);
     });
   }
 
-//users/<int:pk>/tickets/<int:ticket_id>/delete/
-  delete_booking(userId: number, ticketId: number) {
-    return this.http.post<any>(`${this.URL}/users/${userId}/tickets/${ticketId}/delete`, {}).subscribe(response => {
-      console.log(response);
-      this.displaySuccessMessage();
-    }, error => {
-      console.error('An error occurred:', error);
-    });
+  deleteBooking(userId: number, ticketId: number) {
+    this.ticketService.deleteBooking(userId, ticketId)
+      .subscribe(response => {
+        console.log(response);
+        this.displaySuccessMessage();
+      }, error => {
+        console.error('An error occurred:', error);
+      });
   }
+  
+
+//users/<int:pk>/tickets/<int:ticket_id>/delete/
+  // delete_booking(userId: number, ticketId: number) {
+  //   return this.http.post<any>(`${this.URL}/users/${userId}/tickets/${ticketId}/delete`, {}).subscribe(response => {
+  //     console.log(response);
+  //     this.displaySuccessMessage();
+  //   }, error => {
+  //     console.error('An error occurred:', error);
+  //   });
+  // }
   goBack() {
     this.router.navigate(['/']); 
   }

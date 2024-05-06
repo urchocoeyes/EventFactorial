@@ -81,18 +81,16 @@ def user_tickets(request, pk):
 def delete_booking(request, pk, ticket_id):
     if request.method == 'POST':
         user = get_object_or_404(User, pk=pk)
-        ticket = get_object_or_404(Ticket, pk=ticket_id)
+        ticket = Ticket.objects.get(id=ticket_id)
         event = ticket.event
         
-        if request.user == user and request.user == ticket.user:        
-            event.tickets_available += 1
-            event.save()
+        event.tickets_available += 1
+        event.save()
             
-            user.tickets.remove(ticket)
-            
-            return JsonResponse({'success': True, 'message': 'Booking deleted successfully'})
-        else:
-            return JsonResponse({'success': False, 'message': 'Unauthorized to delete this booking'})
+        ticket.delete()
+        
+        return JsonResponse({'success': True, 'message': 'Booking deleted successfully'})
+            # return JsonResponse({'success': False, 'message': 'Unauthorized to delete this booking'})
     
     return JsonResponse({'success': False, 'message': 'Invalid request method'})
 

@@ -15,4 +15,9 @@ export class TicketService {
   getUserTickets(userId: number): Observable<ITicket[]> {
     return this.http.get<ITicket[]>(`${this.URL}/users/${userId}/tickets/`);
   }
+
+  deleteBooking(userId: number, ticketId: number): Observable<any> {
+    return this.http.post<any>(`${this.URL}/users/${userId}/tickets/${ticketId}/delete`, {});
+  }
+
 }

@@ -14,7 +14,7 @@ export interface IEvent {
   }
 
 export interface ITicket {
-    ticket_id: number;
+    id: number;
     event_title: string;
     event_description: string;
     event_date: Date; 
