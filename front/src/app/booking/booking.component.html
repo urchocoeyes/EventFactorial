@@ -5,7 +5,7 @@
       <div class="tickets" *ngIf="tickets">
         <div *ngFor="let ticket of tickets"> 
           <h2>{{ ticket.event_title }}</h2>
-          <!-- <p>Билет номер: {{ ticket.ticket_id }}</p> -->
+          <p>Билет номер: {{ ticket.ticket_id }}</p>
           <p>{{ ticket.event_description }}</p>
           <p>Дата: {{ ticket.event_date }}</p>
           <p>Место проведения: {{ ticket.event_location }}</p>

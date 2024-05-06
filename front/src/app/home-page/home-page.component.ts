@@ -6,6 +6,7 @@ import { IEvent } from '../models';
 import { ActivatedRoute } from '@angular/router';
 import { EventService } from '../event.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home-page',
   standalone: true,
@@ -18,7 +19,7 @@ export class HomePageComponent {
   private URL = 'http://127.0.0.1:8000/api';
   showSuccessMessage=false;
   constructor(private route: ActivatedRoute,private eventService: EventService,
-    private http: HttpClient
+    private http: HttpClient, private router: Router
   ) {}
   displaySuccessMessage() {
     this.showSuccessMessage = true;
@@ -36,6 +37,7 @@ export class HomePageComponent {
     this.http.post<any>(`${this.URL}/events/${eventId}/register/${userId}/`, {}).subscribe(response => {
       console.log(response);
       this.displaySuccessMessage();
+      this.router.navigate(['/success']); 
     }, error => {
       console.error('An error occurred:', error);
     });

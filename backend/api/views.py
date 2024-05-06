@@ -93,8 +93,8 @@ def delete_booking(request, pk, ticket_id):
             return JsonResponse({'success': True, 'message': 'Booking deleted successfully'})
         else:
             return JsonResponse({'success': False, 'message': 'Unauthorized to delete this booking'})
-
-
+    
+    return JsonResponse({'success': False, 'message': 'Invalid request method'})
 
 '''
 Логика, которую хочу реализовать если успею 

@@ -10,6 +10,7 @@ export interface IEvent {
     date: Date;
     location: string;
     tickets_available: number;
+
   }
 
 export interface ITicket {

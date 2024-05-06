@@ -10,11 +10,12 @@
                 <p>Место проведения: {{ event.location }}</p>
                 <p>Билеты доступны: {{event.tickets_available}}</p>
                 <div class="cta-btn">
-                    <button (click)="onRegister(event.id, 1)">Register</button>
+                    <button (click)="onRegister(event.id, 1)">Регистрация / Хочу пойти!</button>
                 </div>
-                <div id="successMessage" class="success-message" *ngIf="showSuccessMessage">
+                <!-- <div id="successMessage" class="success-message" *ngIf="showSuccessMessage" [style.background-color]="'green'" [style.color]="'white'" [style.padding]="'10px'" [style.border-radius]="'5px'">
                     Регистрация прошла успешно!
-                </div>
+                </div> -->
+                
     
                 </li>
             </div>
