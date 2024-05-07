@@ -16,8 +16,8 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent {
   events: IEvent[] = [];
-  // private URL = 'http://127.0.0.1:8000/api';
-  private URL = 'https://django-deployment-1-a1tggxy7w-nazyms-projects.vercel.app'
+  private URL = 'http://127.0.0.1:8000/api';
+  // private URL = 'https://django-deployment-1-a1tggxy7w-nazyms-projects.vercel.app'
 
   showSuccessMessage=false;
   // Локальный массив для хранения информации о регистрации на события

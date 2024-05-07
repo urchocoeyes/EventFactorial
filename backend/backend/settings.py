@@ -62,9 +62,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 ALLOWED_HOSTS = [
-    '.vercel.app',
-    'localhost:8000',
-    'netlify.app'
+    # '.vercel.app',
+    # 'localhost:8000',
+    # 'netlify.app'
 ]
 
 # CSRF_TRUSTED_ORIGINS = ["http://localhost:4200"]
