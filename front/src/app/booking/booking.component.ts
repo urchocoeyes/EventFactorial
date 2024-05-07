@@ -14,7 +14,8 @@ import { Router } from '@angular/router';
   styleUrl: './booking.component.css'
 })
 export class BookingComponent {
-  private URL = 'http://127.0.0.1:8000/api';
+  // private URL = 'http://127.0.0.1:8000/api';
+  private URL = 'https://django-deployment-1-a1tggxy7w-nazyms-projects.vercel.app'
   tickets: ITicket[] = [];
   loading = false;
   showSuccessMessage=false;

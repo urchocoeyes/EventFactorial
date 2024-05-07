@@ -8,7 +8,8 @@ import { CommonModule } from '@angular/common';
 })
 export class TicketService {
   
-  private URL = 'http://127.0.0.1:8000/api';
+  // private URL = 'http://127.0.0.1:8000/api';
+  private URL = 'https://django-deployment-1-a1tggxy7w-nazyms-projects.vercel.app'
 
   constructor(private http: HttpClient) {}
 

@@ -134,7 +134,8 @@ export class AppComponent implements OnInit {
   logged: boolean = false;
   username: string = "";
   password: string = "";
-  private URL = 'http://127.0.0.1:8000/api';
+  // private URL = 'http://127.0.0.1:8000/api';
+  private URL = 'https://django-deployment-1-a1tggxy7w-nazyms-projects.vercel.app'
 
   constructor(private eventService: EventService,
     private http: HttpClient,

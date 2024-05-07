@@ -7,14 +7,15 @@ import {HttpClient} from "@angular/common/http";
 })
 
 export class EventService {
-  BASE_URL = 'http://localhost:8000';
+  // BASE_URL = 'http://localhost:8000';
+  private URL = 'https://django-deployment-1-a1tggxy7w-nazyms-projects.vercel.app'
 
   constructor(private http: HttpClient,  ) {
   }
 
   login(username: string, password: string): Observable<Token> {
     return this.http.post<Token>(
-      `${this.BASE_URL}/api/login/`,
+      `${this.URL}/api/login/`,
       {username, password}
     )
   }
@@ -25,7 +26,7 @@ export class EventService {
 
   getEvents(): Observable<IEvent[]> {
     return this.http.get<IEvent[]>(
-      `${this.BASE_URL}/api/events/`
+      `${this.URL}/api/events/`
     )
   }
 }
