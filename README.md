@@ -2,10 +2,44 @@
 
 Добро пожаловать в систему управления мероприятиями! Этот проект представляет собой веб-приложение, которое обеспечивает удобное управление мероприятиями в городе Алматы. Пользователи могут легко [просматривать предстоящие события](#главная-страница), [регистрироваться на них](#регистрация-на-события), [управлять своими бронированиями](#страница-управление-билетами) и [управлять учетными записями](#страница-login).
 
-## В целом
+## Базовая инструкция по локальному развертыванию 
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Django 
+```cd backend```
+
+
+```python manage.py runserver```
+
+# В целом
 Веб-приложение создано с помощью фронтенд-фреймковорка Angular и бэкенд-фреймворка Django. 
 Данные взяты из [sxodim](https://sxodim.com/almaty). 
-Помимо [локального развертывания](#Локальное-развертывание), я разместила на хостинге Vercel сайт: https://naza_cool.com
+Помимо [локального развертывания](#базовая-инструкция-по-локальному-развертыванию), я разместила на хостинге Vercel сайт: https://naza_cool.com
 
 ## Этапы разработки
 Frontend: Frontend сторона была собрана на компонентах и сервисах(которые связывают frontend и backend api). Компоненты: 
