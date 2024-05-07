@@ -1,0 +1,8 @@
+{
+  "routes": [
+    "/booking",
+    "/delete_success",
+    "/home",
+    "/success"
+  ]
+}

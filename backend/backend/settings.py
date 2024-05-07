@@ -64,7 +64,7 @@ MIDDLEWARE = [
 ALLOWED_HOSTS = [
     # '.vercel.app',
     # 'localhost:8000',
-    # 'netlify.app'
+    # '.netlify.app'
 ]
 
 # CSRF_TRUSTED_ORIGINS = ["http://localhost:4200"]
@@ -81,6 +81,8 @@ ROOT_URLCONF = 'backend.urls'
 
 CORS_ALLOWED_ORIGINS = [
         "http://localhost:4200",
+            # 'https://tourmaline-gelato-07ca53.netlify.app/',
+
 ]
 APPEND_SLASH = False
 TEMPLATES = [

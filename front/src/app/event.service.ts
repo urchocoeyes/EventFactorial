@@ -8,7 +8,7 @@ import {HttpClient} from "@angular/common/http";
 
 export class EventService {
   BASE_URL = 'http://localhost:8000';
-  // private URL = 'https://django-deployment-1-a1tggxy7w-nazyms-projects.vercel.app'
+  // private BASE_URL = 'https://django-deployment-1-a1tggxy7w-nazyms-projects.vercel.app'
 
   constructor(private http: HttpClient,  ) {
   }
