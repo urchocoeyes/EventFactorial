@@ -47,16 +47,6 @@ export class BookingComponent {
       });
   }
   
-
-//users/<int:pk>/tickets/<int:ticket_id>/delete/
-  // delete_booking(userId: number, ticketId: number) {
-  //   return this.http.post<any>(`${this.URL}/users/${userId}/tickets/${ticketId}/delete`, {}).subscribe(response => {
-  //     console.log(response);
-  //     this.displaySuccessMessage();
-  //   }, error => {
-  //     console.error('An error occurred:', error);
-  //   });
-  // }
   goBack() {
     this.router.navigate(['/']); 
   }

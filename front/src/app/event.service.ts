@@ -20,10 +20,6 @@ export class EventService {
     )
   }
 
-  // onRegister(eventId: number, userId: number) {
-  //   this.registerComponent.registerUserForEvent(eventId, userId);
-  //   }
-
   getEvents(): Observable<IEvent[]> {
     return this.http.get<IEvent[]>(
       `${this.BASE_URL}/api/events/`
