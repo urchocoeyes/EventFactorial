@@ -7,6 +7,9 @@
 
 Для оптимальной сборки и развертывания приложения, используйте Angular DevKit.Выполните следующую команду в терминале, находясь в ```front``` директории проекта:
 
+Открываем первый терминал для `node`:
+
+
 ```cd front```
 
 ```npm install --save-dev @angular-devkit/build-angular```
@@ -37,6 +40,9 @@
 Для получения дополнительной помощи по Angular CLI используйте `ng help` или посетите страницу [Angular CLI Overview and Command Reference](https://angular.io/cli).
 
 ## Django 
+
+Создаем второй терминал для `python`:
+
 ```cd backend```
 
 
